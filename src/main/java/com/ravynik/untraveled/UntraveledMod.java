@@ -1,5 +1,11 @@
 package com.ravynik.untraveled;
 
+import com.ravynik.untraveled.lists.ItemList;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -34,4 +40,20 @@ public class UntraveledMod {
         logger.info("RAV: clientRegistries method registered");
 
     }
+
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class RegistryEvents{
+        @SubscribeEvent
+        public static void registerItems(final RegistryEvent.Register<Item> event){
+            event.getRegistry().registerAll(
+            ItemList.ornate_sword = new Item(new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("ornate_sword.json"))
+            );
+            logger.info("Items Registered");
+        }
+
+        private static ResourceLocation location(String name){
+            return new ResourceLocation(Reference.MOD_ID, name);
+        }
+    }
+
 }
