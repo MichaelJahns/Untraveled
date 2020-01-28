@@ -1,0 +1,12 @@
+[{
+  "modid": "untraveledmod",
+  "name": "Untravled Mod",
+  "description": "Im working hard",
+  "version": "1.0.0.0",
+  "mcversion": "1.14.5",
+  "logoFile": "assets/examplemod/textures/logo.png",
+  "url": "minecraftforge.net/",
+  "updateJSON": "minecraftforge.net/versions.json",
+  "authorList": ["Ravynik"],
+  "credits": "I'd like to thank my mother and father. And all of you"
+}]
