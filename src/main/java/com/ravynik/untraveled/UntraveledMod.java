@@ -46,7 +46,7 @@ public class UntraveledMod {
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event){
             event.getRegistry().registerAll(
-            ItemList.ornate_sword = new Item(new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("ornate_sword.json"))
+            ItemList.ornate_sword = new Item(new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName(location("ornate_sword"))
             );
             logger.info("Items Registered");
         }
